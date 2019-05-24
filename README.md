@@ -25,14 +25,14 @@ Variables
 
 Resulting Variable Importances
 
-| Feature                  | Weight     |
-|--------------------------|------------|
-| Daily.Internet.Usage     | 9.26726215 |
-| Daily.Time.Spent.on.Site | 9.08133517 |
-| Area.Income              | 7.20065941 |
-| Age                      | 6.62899169 |
-| Location: Americas       | 1.04433791 |
-| Male                     | 1.01086753 |
-| Location: Asia           | 0.16422270 |
-| Location: Oceania        | 0.70009648 |
-| Location: Europe         | 0.08957871 |
+| Feature                  | Weight|
+|--------------------------|-------|
+| Daily.Internet.Usage     | 9.267 |
+| Daily.Time.Spent.on.Site | 9.081 |
+| Area.Income              | 7.201 |
+| Age                      | 6.629 |
+| Location: Americas       | 1.044 |
+| Male                     | 1.011 |
+| Location: Asia           | 0.164 |
+| Location: Oceania        | 0.700 |
+| Location: Europe         | 0.090 |
