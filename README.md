@@ -2,7 +2,7 @@ COMPARISON BETWEEN LOGISTIC AND KNN
 
 Perform the classification below once using Logistic Regression and then using KNN. Which model performs better? Which would you prefer (KNN cannot give you the probability of a user clicking on an ad)?
 
-The goal of the project is to Predict who is likely going to click on the Ad on a website based on the features of a user. Following are the features involved in [this dataset](https://www.kaggle.com/fayomi/advertising) which is obtained from Kaggle.
+The goal of the project is to Predict who is likely going to click on the Ad on a website based on the features of a user. Following are the features involved in [this dataset](https://www.kaggle.com/fayomi/advertising) which is obtained from [Kaggle](https://www.kaggle.com).
 
 Daily Time Spent on a Site: Time spent by the user on a site in minutes.
 Age:Customer's age in terms of years.
