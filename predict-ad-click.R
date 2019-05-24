@@ -143,17 +143,35 @@ print(paste("Logistic Regression Accuracy: ", toString(LR_accuracy*100) ))
 
 
 
-print("LVQ Variable Importance:")
-control <- trainControl(method='repeatedcv', number = 10, repeats = 3)
-# Train the model
-logRegData$Clicked.on.Ad = factor(logRegData$Clicked.on.Ad, levels = c("1", "0"), labels = c(1, 0))
-model <- train(Clicked.on.Ad ~ ., data=logRegData, method = "lvq", preProcess = "scale", trControl = control)
-sapply(logRegData, class)
-importance <- varImp(model, scale=FALSE)
+print("GLM Variable Importance:")
+importance <- varImp(classifier, scale=FALSE)
 print(importance)
 plot(importance)
+importance$varnames <- rownames(importance)
+importance$var_categ <- "Location"
+library(ggplot2) 
+importance[which(rownames(importance) %in% c("continent4")), 2] <- "Europe"
+importance[which(rownames(importance) %in% c("continent3")), 2] <- "Asia"
+importance[which(rownames(importance) %in% c("continent5")), 2] <- "Americas"
+importance[which(rownames(importance) %in% c("continent6")), 2] <- "Oceania"
+importance[which(rownames(importance) %in% c("Daily.Time.Spent.on.Site")), 2] <- "DTOS"
+importance[which(rownames(importance) %in% c("Daily.Internet.Usage")), 2] <- "DIU"
+importance[which(rownames(importance) %in% c("Area.Income")), 2] <- "AI"
+
+importance[which(rownames(importance) %in% c("Daily.Time.Spent.on.Site")), 3] <- "Site/Internet Usage"
+importance[which(rownames(importance) %in% c("Daily.Internet.Usage")), 3] <- "Site/Internet Usage"
+
+importance[which(rownames(importance) %in% c("Area.Income")), 3] <- "Demographics"
+importance[which(rownames(importance) %in% c("Male")), 3] <- "Demographics"
+importance[which(rownames(importance) %in% c("Age")), 3] <- "Demographics"
 
 
+
+ggplot(importance, aes(x=reorder(varnames, Overall), weight=Overall, fill=as.factor(var_categ))) + 
+  geom_bar() +
+  scale_fill_discrete(name="Variable Group") +
+  ylab("Overall Variable Importance") +
+  xlab("Variable")
 
 print("Logistic Regression Confusion Matrix (AKA Clarity Matrix)")
 print("Knn Confusion/Clarity Matrix)")
