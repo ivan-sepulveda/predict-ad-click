@@ -8,6 +8,9 @@ The goal of the project is to Predict who is likely going to click on the Ad on 
 
 KNN Classification Accuracy at k=1: 100%
 
+Different k values shown below
+![alt text](https://raw.githubusercontent.com/ivan-sepulveda/predict-ad-click/master/Knn.png)
+
 
 Logistic Regression Accuracy: 97.1 %
 
