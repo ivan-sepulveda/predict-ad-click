@@ -1,4 +1,4 @@
-COMPARISON BETWEEN LOGISTIC AND KNN
+#Comparison Between Logistic Regression and Knn
 
 Perform the classification below once using Logistic Regression and then using KNN. Which model performs better? Which would you prefer (KNN cannot give you the probability of a user clicking on an ad)?
 
@@ -14,3 +14,17 @@ Male: Whether or not a consumer was male.
 Country: Country of the consumer.
 Timestamp: Time at which user clicked on an Ad or the closed window.
 Clicked on Ad: 0 or 1 is indicated clicking on an Ad.
+
+
+Resulting Variable Importances
+| Feature                  | Weight     |
+|--------------------------|------------|
+| Daily.Internet.Usage     | 9.26726215 |
+| Daily.Time.Spent.on.Site | 9.08133517 |
+| Area.Income              | 7.20065941 |
+| Age                      | 6.62899169 |
+| Location: Americas       | 1.04433791 |
+| Male                     | 1.01086753 |
+| Location: Asia           | 0.16422270 |
+| Location: Oceania        | 0.70009648 |
+| Location: Europe         | 0.08957871 |

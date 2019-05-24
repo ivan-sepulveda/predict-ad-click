@@ -16,6 +16,10 @@ library(class)
 library(caTools)
 library(psych)
 library(ISOcodes)
+library(caret)
+library(countrycode)
+library(mlbench)
+library(e1071)
 
 knn_data <- read.csv('advertising.csv')
 colnames(knn_data)
@@ -99,7 +103,6 @@ ta <- table(unlist(k_values), unlist(acc_values))
 a <- data.frame(ta)
 plot(unlist(k_values),unlist(acc_values))
 
-library(countrycode)
 logRegData <- read.csv('advertising.csv')
 
 logRegData <- logRegData[rowSums(is.na(logRegData)) == 0, ]
@@ -137,6 +140,18 @@ LR_accuracy = (LR_true_one + LR_true_zero)/(LR_true_one + LR_true_zero + LR_fals
 print("Logistic Regression Confusion/Clarity Matrix)")
 logRegConMatrix
 print(paste("Logistic Regression Accuracy: ", toString(LR_accuracy*100) ))
+
+
+
+print("LVQ Variable Importance:")
+control <- trainControl(method='repeatedcv', number = 10, repeats = 3)
+# Train the model
+logRegData$Clicked.on.Ad = factor(logRegData$Clicked.on.Ad, levels = c("1", "0"), labels = c(1, 0))
+model <- train(Clicked.on.Ad ~ ., data=logRegData, method = "lvq", preProcess = "scale", trControl = control)
+sapply(logRegData, class)
+importance <- varImp(model, scale=FALSE)
+print(importance)
+plot(importance)
 
 
 
