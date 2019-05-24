@@ -29,3 +29,7 @@ Resulting Variable Importances
 | Location: Asia           | 0.16422270 |
 | Location: Oceania        | 0.70009648 |
 | Location: Europe         | 0.08957871 |
+
+
+
+![alt text](https://raw.githubusercontent.com/ivan-sepulveda/predict-ad-click/master/glmVarImp.png)
