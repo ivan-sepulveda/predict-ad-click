@@ -1,4 +1,6 @@
-#Comparison Between Logistic Regression and Knn
+# Comparison Between Logistic Regression and Knn
+
+Packages used included ggplot, caTools, psych, ISOcodes, caret, countrycode, mlbench, and e1071.
 
 Perform the classification below once using Logistic Regression and then using KNN. Which model performs better? Which would you prefer (KNN cannot give you the probability of a user clicking on an ad)?
 
