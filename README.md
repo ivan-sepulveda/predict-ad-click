@@ -17,6 +17,7 @@ Clicked on Ad: 0 or 1 is indicated clicking on an Ad.
 
 
 Resulting Variable Importances
+
 | Feature                  | Weight     |
 |--------------------------|------------|
 | Daily.Internet.Usage     | 9.26726215 |
