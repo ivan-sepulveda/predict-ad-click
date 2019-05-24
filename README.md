@@ -6,16 +6,6 @@ Perform the classification below once using Logistic Regression and then using K
 
 The goal of the project is to Predict who is likely going to click on the Ad on a website based on the features of a user. Following are the features involved in [this dataset](https://www.kaggle.com/fayomi/advertising) which is obtained from [Kaggle](https://www.kaggle.com). 
 
-KNN Classification Accuracy at k=1: 100%
-
-![alt text](https://raw.githubusercontent.com/ivan-sepulveda/predict-ad-click/master/Knn.png)
-
-
-Logistic Regression Accuracy: 97.1 %
-
-
-![alt text](https://raw.githubusercontent.com/ivan-sepulveda/predict-ad-click/master/glmVarImp.png)
-
 Variables
 
 - Daily Time Spent on a Site: Time spent by the user on a site in minutes.
@@ -30,7 +20,19 @@ Variables
 - Clicked on Ad: 0 or 1 is indicated clicking on an Ad.
 
 
-Resulting Variable Importances
+KNN Classification Accuracy at k=1: 100%
+
+![alt text](https://raw.githubusercontent.com/ivan-sepulveda/predict-ad-click/master/Knn.png)
+
+
+Logistic Regression Accuracy: 97.1 %
+
+
+![alt text](https://raw.githubusercontent.com/ivan-sepulveda/predict-ad-click/master/glmVarImp.png)
+
+
+
+GLM Variable Importances
 
 | Feature                  | Weight|
 |--------------------------|-------|
