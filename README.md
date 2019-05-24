@@ -16,6 +16,12 @@ Timestamp: Time at which user clicked on an Ad or the closed window.
 Clicked on Ad: 0 or 1 is indicated clicking on an Ad.
 
 
+
+
+
+![alt text](https://raw.githubusercontent.com/ivan-sepulveda/predict-ad-click/master/glmVarImp.png)
+
+
 Resulting Variable Importances
 
 | Feature                  | Weight     |
@@ -29,7 +35,3 @@ Resulting Variable Importances
 | Location: Asia           | 0.16422270 |
 | Location: Oceania        | 0.70009648 |
 | Location: Europe         | 0.08957871 |
-
-
-
-![alt text](https://raw.githubusercontent.com/ivan-sepulveda/predict-ad-click/master/glmVarImp.png)
